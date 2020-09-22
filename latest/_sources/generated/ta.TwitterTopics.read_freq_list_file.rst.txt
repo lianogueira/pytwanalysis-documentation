@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.read\_freq\_list\_file
+=======================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.read_freq_list_file

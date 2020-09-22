@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.calculate\_average\_node\_degree
+=================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.calculate_average_node_degree

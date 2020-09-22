@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.eigenDecomposition
+===================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.eigenDecomposition

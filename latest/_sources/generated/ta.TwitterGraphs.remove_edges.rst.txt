@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.remove\_edges
+==============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.remove_edges

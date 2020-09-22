@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.loadAggregations
+=============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.loadAggregations

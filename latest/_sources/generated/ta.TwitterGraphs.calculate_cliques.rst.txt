@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.calculate\_cliques
+===================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.calculate_cliques

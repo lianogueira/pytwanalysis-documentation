@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.setConfigs
+=============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.setConfigs

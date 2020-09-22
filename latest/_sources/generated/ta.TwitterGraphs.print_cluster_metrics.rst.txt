@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.print\_cluster\_metrics
+========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.print_cluster_metrics

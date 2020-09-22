@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.plot\_disconnected\_graph\_distr
+=================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.plot_disconnected_graph_distr

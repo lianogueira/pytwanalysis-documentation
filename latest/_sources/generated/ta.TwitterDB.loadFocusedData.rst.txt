@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.loadFocusedData
+============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.loadFocusedData

@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.exportData
+=======================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.exportData

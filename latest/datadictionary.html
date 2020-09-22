@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Dictionary - (MongoDB Collections) &mdash; pytwanalysis 0.0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://networkx.github.io/documentation/stable/datadictionary.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Galery" href="galery.html" />
+    <link rel="prev" title="Reference" href="reference.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> pytwanalysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Dictionary - (MongoDB Collections)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main">Main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#admin">Admin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aggregated">Aggregated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tmp-collections">Tmp Collections</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="galery.html">Galery</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pytwanalysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data Dictionary - (MongoDB Collections)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/datadictionary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-dictionary-mongodb-collections">
+<h1>Data Dictionary - (MongoDB Collections)<a class="headerlink" href="#data-dictionary-mongodb-collections" title="Permalink to this headline">¶</a></h1>
+<p>A collection was created to store the raw data from the Twitter json files and multiple collections were created to store cleaned and transformed data to facilitate the analysis process. Some of the collections share similar fields, which was designed that way to make queries easier and faster to run. Having collections with a focused purpose is also helpful in case other visualization tools are intended to be used in MongoDB. Having all data with all fields in one collection is helpful for cases where there is a need to deal with the unstructured nature of Twitter data, but having separate collections helps with the organization of the data in a more simple way to understand and aggregate the content. That is why a combination of the two approaches was used in this work.</p>
+<div class="section" id="main">
+<h2>Main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h2>
+<p>The following are the main collections in charge or saving and processing the data:</p>
+<ul>
+<li><p><strong>tweet:</strong> This collection will contain the full raw twitter data. The fields available will depend on the content of the json files. This collection might contain different structure depending on which Twitter api was used to retrieve the data. A few additional fields were created to this collection to keep track of what file the tweet came from, the load timestamp, and to facilitate the recovery process.</p></li>
+<li><p><strong>focusedTweet:</strong> This collection will contain only the most important information about the tweet. The definition of “interesting” can be different depending on what is being studied, so settings can be updated to drive what fields are interesting.  Some core fields will always be available no matter the settings. It is useful to have a separate collection for two main reasons, the first one is that it decreases the amount of data stored in one collection which increases the queries performance. The second reason is that it makes it possible to have core columns with a standard name without needing to add logic to the program when accessing the data. For example, depending on the Twitter input data, the field that contains the tweet message can have different names, so standardizing that name in the collection makes future processing easier.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Core Fields:</strong></p></li>
+<li><p><em>id_str:</em> The tweet unique id. This will be a key field that will be used to connect other collections together.</p></li>
+<li><p><em>text:</em> The tweet text.</p></li>
+<li><p><em>text_lower:</em> The tweet text with all lower case.</p></li>
+<li><p><em>quote_text:</em> The text of the quoted tweet, in case there is a quote associated to the tweet.</p></li>
+<li><p><em>retweeted_text:</em> The original tweet text in case of retweets.</p></li>
+<li><p><em>text_combined:</em> Tweet text combining the tweet text, original text, and quoted text.</p></li>
+<li><p><em>text_combined_clean:</em> Same as text_combined, but after going through a series of cleaning steps that will explain in subsection […].</p></li>
+<li><p><em>year:</em> The year the tweet was created.</p></li>
+<li><p><em>month_name:</em> The name of the month that the tweet was created.</p></li>
+<li><p><em>month_no:</em> The month the tweet was created.</p></li>
+<li><p><em>day:</em> The day the tweet was created.</p></li>
+<li><p><em>user_id:</em> The user id of the user that created the tweet.</p></li>
+<li><p><em>hashtags:</em> A list of all hashtags that were included in the tweet, and quoted tweet.</p></li>
+<li><p><em>created_at:</em> The timestamp the tweet was created.</p></li>
+<li><p><em>lang:</em> The language used in the tweet text.</p></li>
+<li><p><em>in_reply_to_status_id_str:</em> In case of replies, this field will show the id of the tweet that the person was replying to.</p></li>
+<li><p><em>in_reply_to_screen_name:</em> In case of replies, this field will show the screen name of the user of the tweet that the person was replying to.</p></li>
+<li><p><em>user_name:</em> The user name of the person that created the tweet.</p></li>
+<li><p><em>user_screen_name:</em> The screen name of the person that created the tweet.</p></li>
+<li></li>
+<li><p><strong>Added Fields</strong>:</p></li>
+<li><p><em>seq_no:</em> Field created to uniquely identify each of the tweets. This field is used in the recovery process to identify the tweets that have already been processed.</p></li>
+<li><p><em>is_bot:</em> Identifies if the user that created the tweet is a bot or not. This field is not automatically calculated. A text file with the list of ids that are bots can be used to update this field.</p></li>
+<li><p><em>is_bot_connection:</em> Identifies if the tweet is part of an edge between users that are bots. For example, this will be set to 1 if the tweet was a reply or a retweet to a user that is a bot. This field is not automatically calculated. A text file with the list of ids that are bots can be used to update this field.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>tweetWords:</strong> This collection will save each word separately for every tweet and some additional information about the tweet. It will also contain interesting tags about that word. (e.g English or not, verb or not, etc.)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Fields:</strong></p></li>
+<li><p><em>word:</em> The original word</p></li>
+<li><p><em>word_tag:</em> It identifies the type of word. ADJ, for adjectives, VERB, for verbs, NOUN, for nouns , and ADV for adverbs.</p></li>
+<li><p><em>word_lemm:</em> The word after lemmatization.</p></li>
+<li><p><em>word_syl:</em> The word broken down into syllables.</p></li>
+<li><p><em>stop_word_fl:</em> It identifies if the word is a stop word or not.</p></li>
+<li><p><em>en_word_fl:</em> It identifies if the word is in English or not.</p></li>
+<li><p><em>tweet_id_str:</em> The tweet id where that word came from.</p></li>
+<li><p><em>text:</em> The tweet text where that word came from.</p></li>
+<li><p><em>user_id:</em> The user id of the tweet where that word came from.</p></li>
+<li><p><em>tweet_created_at:</em> The timestamp of the tweet where that word came from.</p></li>
+<li><p><em>tweet_seq_no:</em> The seq_no of the tweet where that word came from.</p></li>
+<li><p><em>seq_no:</em> The word seq_no.</p></li>
+<li><p><em>is_bot:</em> Same as in the focusedTweet collection.</p></li>
+<li><p><em>is_bot_connection:</em> Same as in the focusedTweet collection.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>tweetConnections:</strong> This collection will contain the edges that connect two tweets together, either by retweets, quotes, replies, or mentions. It will have information about the tweet where the connection happened, and about the two users that connected. This collection will later be used to build the edges for the graph analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Fields:</strong></p></li>
+<li><p><em>tweet_id_str:</em> The id of the tweet that has this connection.</p></li>
+<li><p><em>type_of_connection:</em> The type of connection. It could be retweet, quote, reply, or mention.</p></li>
+<li><p><em>user_id_str_a:</em> The user id of the user that initiated the connection. For example, the user that replied to another user.</p></li>
+<li><p><em>screen_name_a:</em> The screen name of the user that initiated the connection. For example, the user that replied to another user.</p></li>
+<li><p><em>user_id_str_b:</em> The user id of the user that received the connection. For example, another user retweets their tweet.</p></li>
+<li><p><em>screen_name_b:</em> The user screen name of the user that received the connection. For example, another user retweets their tweet.</p></li>
+<li><p><em>desc:</em> Describes the connection for easy understanding. Example of a possible value would be “user a mentioned user b”.</p></li>
+<li><p><em>retweeted_status_id:</em> The id of the original tweet in case of retweets.</p></li>
+<li><p><em>quoted_status_id:</em> The id of the original tweet in case of quotes.</p></li>
+<li><p><em>in_reply_to_status_id:</em> The id of the original tweet in case of replies.</p></li>
+<li><p><em>edge_screen_name_directed_key:</em> A key created to help with directed graphs queries. It basically concatenates the user_a and user_b screen names.</p></li>
+<li><p><em>edge_screen_name_undirected_key:</em> A key created to help with undirected graphs queries. It concatenates the user_a and user_b screen names in alphabetical order.</p></li>
+<li><p><em>tweet_created_at:</em> The timestamp of the tweet that created this connection.</p></li>
+<li><p><em>tweet_seq_no:</em> The seq_no of the tweet that created this connection.</p></li>
+<li><p><em>is_bot:</em> Identifies if this connection is for a bot or not.  For example, this will be set to 1 if either user a or b is a bot. This field is not automatically calculated. A text file with the list of ids that are bots can be used to update this field.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>tweetHTConnections:</strong> This collection will contain the edges that connect two hashtags together. If two hashtags were used in the same tweet, a record will be created in this collection. It will have information about the tweet where the connection happened, and about the two hashtags. This collection will later be used to build the edges for the graph analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Fields:</strong></p></li>
+<li><p><em>tweet_id_str:</em> The id of the tweet that has this connection.</p></li>
+<li><p><em>ht_a:</em> The first hashtag</p></li>
+<li><p><em>ht_b:</em> The second first hashtag</p></li>
+<li><p><em>ht_key:</em> A key created to help with the graphs queries. It concatenates the ht_a and ht_b.</p></li>
+<li><p><em>tweet_created_at:</em> The timestamp of the tweet that created this connection.</p></li>
+<li><p><em>tweet_seq_no:</em> The seq_no of the tweet that has this connection.</p></li>
+<li><p><em>is_bot:</em> Identifies if this connection is for a tweet created by a bot or not.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>users:</strong> This collection will contain interesting information about the tweet user. Some core fields will always exist, but similar to the <a href="#id1"><span class="problematic" id="id2">*</span></a>focusedTweet collection, settings will be available in the pipeline to drive what fields are considered interesting. The same user can appear multiple times in a dataset with different values, for example, the same user can exist with two separate descriptions. This collection will not create multiple records for the same user and it will have the first values found for each user, other records for the same user will be ignored.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Fields:</strong></p></li>
+<li><p><em>screen_name:</em> The screen name of the user</p></li>
+<li><p><em>user_id:</em> The unique id for that user that was generated in Twitter.</p></li>
+<li><p><em>name:</em> The name of the user</p></li>
+<li><p><em>user_created_at:</em> The date and time the user was created in Twitter.</p></li>
+<li><p><em>location:</em> The description the user used to identify their location.</p></li>
+<li><p><em>location_clean:</em> Same as <a href="#id3"><span class="problematic" id="id4">*</span></a>location, but cleaning the special characters.</p></li>
+<li><p><em>description:</em> The description the users decided to give themselves.</p></li>
+<li><p><em>description_clean:</em> Same as <a href="#id5"><span class="problematic" id="id6">*</span></a>description, but cleaning the special characters.</p></li>
+<li><p><em>user_type:</em> The method used to extract the information about this user. Twitter’s documents have user information in the main document, but also under the information about the original tweet in case of retweets and quotes. This field will identify where the user was extracted from. The values available will be <a href="#id7"><span class="problematic" id="id8">*</span></a>tweet, <a href="#id9"><span class="problematic" id="id10">*</span></a>retweet, <a href="#id11"><span class="problematic" id="id12">*</span></a>quote, <a href="#id13"><span class="problematic" id="id14">*</span></a>reply, and <a href="#id15"><span class="problematic" id="id16">*</span></a>mention.</p></li>
+<li><p><em>is_bot:</em> Identifies if the user is a bot or not. This field is not automatically calculated. A text file with the list of ids that are bots can be used to update this field.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="admin">
+<h2>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h2>
+<p>The following are the administrative collections created to control the recovery process:</p>
+<ul class="simple">
+<li><p><strong>adm_loadStatus</strong>: This collection will save the status of each collection’s load and how many tweets have already been inserted in each of them. In case of a failure, it will be used to know which records have already been inserted and which ones haven’t. This was created as part of the recovery process.</p></li>
+<li><p><strong>adm_loadedFiles:</strong> This collection will save the directory and file names that have already been loaded. The load timestamp and the path will be the columns available. This is to make sure the same file doesn’t get loaded multiple times. This was created as part of the recovery process.</p></li>
+</ul>
+<p>The following is the collection used to keep all the searches done to the Twitter APIs:</p>
+<ul>
+<li><p><strong>searches:</strong> This collection will save all the searches done to the Twitter APIs. The fields in this collection will not always be the same. The results from the API return different information depending on the API used. Some core field will always exist to identify the time of the search and which API was used.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Core Fields:</strong></p></li>
+<li><p><em>search_time:</em> the time the search was execute</p></li>
+<li><p><em>api:</em> the api was used for the search. The possible values are: <em>30day</em>, <em>fullarchive</em>, and <em>7day</em>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="aggregated">
+<h2>Aggregated<a class="headerlink" href="#aggregated" title="Permalink to this headline">¶</a></h2>
+<p>The following are the optional aggregate collection to keep summary data for easy EDA:</p>
+<ul class="simple">
+<li><p><strong>agg_tweetCountByFile:</strong> This collection will contain the count of all tweets in the dataset by files loaded.</p></li>
+<li><p><strong>agg_tweetCountByLanguage:</strong> This collection will contain the count of all tweets in the dataset by language.</p></li>
+<li><p><strong>agg_tweetCountByMonth:</strong> This collection will contain the count of all tweets in the dataset by month and year.</p></li>
+</ul>
+</div>
+<div class="section" id="tmp-collections">
+<h2>Tmp Collections<a class="headerlink" href="#tmp-collections" title="Permalink to this headline">¶</a></h2>
+<p>The following are the temporary collections that get dropped and re-created to facilitate analysis and improve aggregate queries performance. It would be possible to create queries without these temporary tables and get the same results, but when querying high volume of data it becomes nearly impossible to return aggregate queries using lookups to multiple tables in a reasonable amount of time.</p>
+<ul class="simple">
+<li><p><strong>tmpEdges:</strong> Temporarily saves the edges of a graph so it can be used as lookup values in different queries.</p></li>
+<li><p><strong>tmpEdgesTweetIds:</strong> Temporarily saves the tweets ids that refer to the edges saved on tmpEdges. This collection will be used as lookup values in different queries.</p></li>
+<li><p><strong>tmpEdgesHTFreq:</strong> Saves the hashtags used in tweets for certain edges (ids saved on tmpEdgesTweetIds). This is used in aggregate queries to count the frequency of hashtags for specific edges.</p></li>
+<li><p><strong>tmpEdgesWordFreq:</strong> Saves the words used in tweets for certain edges (ids saved on tmpEdgesTweetIds). This is used in aggregate queries to count the frequency of words for specific edges.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="galery.html" class="btn btn-neutral float-right" title="Galery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reference.html" class="btn btn-neutral float-left" title="Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lia Nogueira
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

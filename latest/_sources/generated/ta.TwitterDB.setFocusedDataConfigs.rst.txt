@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.setFocusedDataConfigs
+==================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.setFocusedDataConfigs

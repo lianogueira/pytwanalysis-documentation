@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.loadWordsData
+==========================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.loadWordsData

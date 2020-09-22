@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.plot\_timeseries
+===================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.plot_timeseries

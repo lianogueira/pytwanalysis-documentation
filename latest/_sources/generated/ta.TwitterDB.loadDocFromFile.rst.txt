@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.loadDocFromFile
+============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.loadDocFromFile

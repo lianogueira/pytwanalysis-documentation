@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.build\_db\_collections
+=========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.build_db_collections

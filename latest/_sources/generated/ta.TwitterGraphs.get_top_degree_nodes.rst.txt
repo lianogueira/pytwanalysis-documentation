@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.get\_top\_degree\_nodes
+========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.get_top_degree_nodes

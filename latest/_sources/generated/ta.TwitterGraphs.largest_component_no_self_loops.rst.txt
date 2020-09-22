@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.largest\_component\_no\_self\_loops
+====================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.largest_component_no_self_loops

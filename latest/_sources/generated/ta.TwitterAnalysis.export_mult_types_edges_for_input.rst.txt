@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.export\_mult\_types\_edges\_for\_input
+=========================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.export_mult_types_edges_for_input

@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.train\_model\_from\_file
+=========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.train_model_from_file

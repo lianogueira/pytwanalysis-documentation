@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.get\_docs\_from\_file
+======================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.get_docs_from_file

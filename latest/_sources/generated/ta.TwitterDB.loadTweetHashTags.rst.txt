@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.loadTweetHashTags
+==============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.loadTweetHashTags

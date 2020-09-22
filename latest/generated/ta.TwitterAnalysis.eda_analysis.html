@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ta.TwitterAnalysis.eda_analysis &mdash; pytwanalysis 0.0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://networkx.github.io/documentation/stable/generated/ta.TwitterAnalysis.eda_analysis.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> pytwanalysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datadictionary.html">Data Dictionary - (MongoDB Collections)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../galery.html">Galery</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pytwanalysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>ta.TwitterAnalysis.eda_analysis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/ta.TwitterAnalysis.eda_analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ta-twitteranalysis-eda-analysis">
+<h1>ta.TwitterAnalysis.eda_analysis<a class="headerlink" href="#ta-twitteranalysis-eda-analysis" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt id="ta.TwitterAnalysis.eda_analysis">
+<code class="sig-prename descclassname">TwitterAnalysis.</code><code class="sig-name descname">eda_analysis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ta.html#TwitterAnalysis.eda_analysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ta.TwitterAnalysis.eda_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to print a summary of the initial exploratory data analysis for any dataset.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create Exploratory Data Analysis files</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">eda_analysis</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>It includes the following metrics:</p>
+<ul>
+<li><p><strong>Tweet counts</strong>: The number of tweet document in the database, divided by the following categories.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Total Original Tweets: The number of tweet documents in the database that are original tweets.</p></li>
+<li><p>Total Replies: The number of tweet documents in the database that are replies to another tweet.</p></li>
+<li><p>Total Retweets: The number of tweet documents in the database that are retweets.</p></li>
+<li><p>Total Tweets: The total number of tweet documents in the database.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Tweet counts by language</strong>: The number of tweets document for each language used in the tweets.</p></li>
+<li><p><strong>Tweet counts by month</strong>: The number of tweets document for each month/year.</p></li>
+<li><p><strong>Tweet counts by file</strong>: The number of tweets document imported from each of the json files.</p></li>
+<li><p><strong>User counts</strong>: The number of users in the database, divided by the following categories.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>tweet: Users with at least one document in the database.</p></li>
+<li><p>retweet: Users that were retweeted, but are not part of previous group.</p></li>
+<li><p>quote: Users that were quoted, but are not part of previous groups.</p></li>
+<li><p>reply: Users that were replied to, but are not part of previous groups.</p></li>
+<li><p>mention: Users that were mentioned, but are not part of previous groups.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>All User Connections Graph</strong>: The metrics for the graph created based on the users connecting by retweets, quotes, mentions, and replies.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p># of Nodes: The total number of nodes in the graph.</p></li>
+<li><p># of Edges: The total number of edges in the graph.</p></li>
+<li><p># of Nodes of the largest connected components: The total number of nodes in the largest connected component of the graph.</p></li>
+<li><p># of Edges of the largest connected components: The total number of edges in the largest connected component of the graph.</p></li>
+<li><p># of Disconnected Graphs: The number of sub-graphs within the main graph that are not connected to each other.</p></li>
+<li><p># of Louvain Communities found in the largest connected component: The number of communities found in the largest connected component using the Louvain method.</p></li>
+<li><p>Degree of the top 5 most connected users: List of the top 5 users with the highest degree. Shows the user screen name and respective degrees.</p></li>
+<li><p>Average Node Degree of largest connected graph: The average degree of all nodes that are part of the largest connected component of the graph.</p></li>
+<li><p>Plot of the Louvain community distribution: A barchart showing the node count distribution of the communities found with the Louvain method.</p></li>
+<li><p>Disconnected graphs distribution: A plot of a graph showing the distribution of the disconnected graphs. It shows the total number of nodes and edges for each of the disconnected graphs.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Mentions User Connections Graph</strong>: The same metrics as the <em>All User Connections</em> graph, but only considering the connections made by mentions.</p></li>
+<li><p><strong>Retweets User Connections Graph</strong>: The same metrics as the <em>All User Connections</em> graph, but only considering the connections made by retweets.</p></li>
+<li><p><strong>Replies User Connections Graph</strong>: The same metrics as the <em>All User Connections</em> graph, but only considering the connections made by replies.</p></li>
+<li><p><strong>HT Connection Graph</strong>: The same metrics as the <em>All User Connections</em> graph, but only considering the connections made by hashtags.</p></li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lia Nogueira
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

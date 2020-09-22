@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.plot\_graph\_att\_distr
+========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.plot_graph_att_distr

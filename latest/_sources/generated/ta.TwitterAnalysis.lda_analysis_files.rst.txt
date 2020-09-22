@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.lda\_analysis\_files
+=======================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.lda_analysis_files

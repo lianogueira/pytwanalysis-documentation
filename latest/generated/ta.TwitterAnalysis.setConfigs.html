@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ta.TwitterAnalysis.setConfigs &mdash; pytwanalysis 0.0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://networkx.github.io/documentation/stable/generated/ta.TwitterAnalysis.setConfigs.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> pytwanalysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datadictionary.html">Data Dictionary - (MongoDB Collections)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../galery.html">Galery</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pytwanalysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>ta.TwitterAnalysis.setConfigs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/generated/ta.TwitterAnalysis.setConfigs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ta-twitteranalysis-setconfigs">
+<h1>ta.TwitterAnalysis.setConfigs<a class="headerlink" href="#ta-twitteranalysis-setconfigs" title="Permalink to this headline">¶</a></h1>
+<dl class="py method">
+<dt id="ta.TwitterAnalysis.setConfigs">
+<code class="sig-prename descclassname">TwitterAnalysis.</code><code class="sig-name descname">setConfigs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type_of_graph</span><span class="o">=</span><span class="default_value">'user_conn_all'</span></em>, <em class="sig-param"><span class="n">is_bot_Filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period_arr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_nodes_edges_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_graphs_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_topic_model_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_ht_frequency_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_words_frequency_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_timeseries_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_top_nodes_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_community_files_flag</span><span class="o">=</span><span class="default_value">'N'</span></em>, <em class="sig-param"><span class="n">create_ht_conn_files_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">num_of_topics</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">top_no_word_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">top_ht_to_ignore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">graph_plot_cutoff_no_nodes</span><span class="o">=</span><span class="default_value">500</span></em>, <em class="sig-param"><span class="n">graph_plot_cutoff_no_edges</span><span class="o">=</span><span class="default_value">2000</span></em>, <em class="sig-param"><span class="n">create_graph_without_node_scale_flag</span><span class="o">=</span><span class="default_value">'N'</span></em>, <em class="sig-param"><span class="n">create_graph_with_node_scale_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">create_reduced_graph_flag</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">reduced_graph_comty_contract_per</span><span class="o">=</span><span class="default_value">90</span></em>, <em class="sig-param"><span class="n">reduced_graph_remove_edge_weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reduced_graph_remove_edges</span><span class="o">=</span><span class="default_value">'Y'</span></em>, <em class="sig-param"><span class="n">top_degree_start</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">top_degree_end</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">period_top_degree_start</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">period_top_degree_end</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">commty_edge_size_cutoff</span><span class="o">=</span><span class="default_value">200</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ta.html#TwitterAnalysis.setConfigs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ta.TwitterAnalysis.setConfigs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the current object settings to drive the automation of the analysis files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type_of_graph</strong> (<em>(Optional)</em>) – This setting defines the type of graph to analyze. Six different options are available: user_conn_all, user_conn_retweet, user_conn_quote, user_conn_reply, user_conn_mention, and ht_conn.
+(Default=’user_conn_all’)</p></li>
+<li><p><strong>is_bot_Filter</strong> (<em>(Default=None)</em>)</p></li>
+<li><p><strong>period_arr</strong> (<em>(Optional)</em>) – An array of start and end dates can be set so that the pipeline creates a separate analysis folder for each of the periods in the array. (Default=None)</p></li>
+<li><p><strong>create_nodes_edges_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will create two files for each graph and sub-graph. One file with the edge list, and one with the node list and their respective degree.(Default=’Y’)</p></li>
+<li><p><strong>create_graphs_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will plot the graph showing all the connections.
+(Default=’Y’)</p></li>
+<li><p><strong>create_topic_model_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will create topic discovery related files for each folder. It will create a text file with all the tweets that are part of that folder, it will also train a LDA model based on the tweets texts and plot a graph with the results.
+(Default=’Y’)</p></li>
+<li><p><strong>create_ht_frequency_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will create hashtag frequency files for each folder. It will create a text file with the full list of hashtags and their frequency, a wordcloud showing the most frequently used hashtags, and barcharts showing the top 30 hashtags.
+(Default=’y’)’</p></li>
+<li><p><strong>create_words_frequency_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will create word frequency files for each folder. It will create a text file with a list of words and their frequency, a wordcloud showing the most frequently used words, and barcharts showing the top 30 words.
+(Default=’Y’)</p></li>
+<li><p><strong>create_timeseries_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will create timeseries graphs for each folder representing the tweet count by day, and the top hashtags frequency count by day.
+(Default=’Y’)</p></li>
+<li><p><strong>create_top_nodes_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will create separate analysis folders for all the top degree nodes.
+(Default=’Y’)</p></li>
+<li><p><strong>create_community_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will use the louvain method to assign each node to a community. A separate folder for each of the communities will be created with all the analysis files.
+(Default=’N’)</p></li>
+<li><p><strong>create_ht_conn_files_flag</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, the pipeline will plot hashtag connections graphs. This can be used when user connections are being analyzed, but it could still be interesting to see the hashtags connections made by that group of users.
+(Default=’Y’)</p></li>
+<li><p><strong>num_of_topics</strong> (<em>(Optional)</em>) – If the setting <em>CREATE_TOPIC_MODEL_FILES_FLAG</em> was set to ‘Y’, then this number will be used to send as input to the LDA model. If no number is given, the pipeline will use 4 as the default value.
+(Default=4)</p></li>
+<li><p><strong>top_no_word_filter</strong> (<em>(Optional)</em>) – If the setting <em>CREATE_WORDS_FREQUENCY_FILES_FLAG</em> was set to ‘Y’, then this number will be used to decide how many words will be saved in the word frequency list text file. If no number is given, the pipeline will use 5000 as the default value.
+(Default=None)</p></li>
+<li><p><strong>top_ht_to_ignore</strong> (<em>(Optional)</em>) – If the setting <em>CREATE_HT_CONN_FILES_FLAG</em> was set to ‘Y’, then this number will be used to choose how many top hashtags can be ignored. Sometimes ignoring the main hashtag can be helpful in visualizations to discovery other interesting structures within the graph.
+(Default=None)</p></li>
+<li><p><strong>graph_plot_cutoff_no_nodes</strong> (<em>(Optional)</em>) – Used with the graph_plot_cutoff_no_edges parameter. For each graph created, these numbers will be used as cutoff values to decide if a graph is too large to be plot or not. Choosing a large number can result in having the graph to take a long time to run. Choosing a small number can result in graphs that are too reduced and with little value or even graphs that can’t be printed at all because they can’t be reduce further.
+(Default=500)</p></li>
+<li><p><strong>graph_plot_cutoff_no_edges</strong> (<em>(Optional)</em>) – Used with the graph_plot_cutoff_no_nodes parameter. For each graph created, these numbers will be used as cutoff values to decide if a graph is too large to be plot or not. Choosing a large number can result in having the graph to take a long time to run. Choosing a small number can result in graphs that are too reduced and with little value or even graphs that can’t be printed at all because they can’t be reduce further.
+(Default=2000)</p></li>
+<li><p><strong>create_graph_without_node_scale_flag</strong> (<em>(Optional)</em>) – For each graph created, if this setting is set to ‘Y’, the pipeline will try to plot the full graph with no reduction and without any logic for scaling the node size.
+(Default=’N’)</p></li>
+<li><p><strong>create_graph_with_node_scale_flag</strong> (<em>(Optional)</em>) – For each graph created, if this setting is set to ‘Y’, the pipeline will try to plot the full graph with no reduction, but with additional logic for scaling the node size.
+(Default=’Y’)</p></li>
+<li><p><strong>create_reduced_graph_flag</strong> (<em>(Optional)</em>) – For each graph created, if this setting is set to ‘Y’, the pipeline will try to plot the reduced form of the graph.
+(Default=’Y’)</p></li>
+<li><p><strong>reduced_graph_comty_contract_per</strong> (<em>(Optional)</em>) – If the setting <em>CREATE_REDUCED_GRAPH_FLAG</em> was set to ‘Y’, then this number will be used to reduce the graphs by removing a percentage of each community found in that particular graph. The logic can be run multiple times with different percentages. For each time, a new graph file will be saved with a different name according to the parameter given.
+(Default=90)</p></li>
+<li><p><strong>reduced_graph_remove_edge_weight</strong> (<em>(Optional)</em>) – If the setting <em>CREATE_REDUCED_GRAPH_FLAG</em> was set to ‘Y’, then this number will be used to reduce the graphs by removing edges that have weights smaller then this number. The logic can be run multiple times with different percentages. For each time, a new graph file will be saved with a different name according to the parameter given.
+(Default=None)</p></li>
+<li><p><strong>reduced_graph_remove_edges</strong> (<em>(Optional)</em>) – If this setting is set to ‘Y’, and the setting <a href="#id1"><span class="problematic" id="id2">*</span></a>CREATE_REDUCED_GRAPH_FLAG was set to ‘Y’, then the pipeline will continuously try to reduce the graphs by removing edges of nodes with degrees smaller than this number. It will stop the graph reduction once it hits the the values set int the GRAPH_PLOT_CUTOFF parameters.
+(Default=’Y’)</p></li>
+<li><p><strong>top_degree_start</strong> (<em>(Optional)</em>) – If the setting  <em>CREATE_TOP_NODES_FILES_FLAG</em> was set to ‘Y’, then these numbers will define how many top degree node sub-folders to create.
+(Default=1)</p></li>
+<li><p><strong>top_degree_end</strong> (<em>(Optional)</em>) – If the setting  <em>CREATE_TOP_NODES_FILES_FLAG</em> was set to ‘Y’, then these numbers will define how many top degree node sub-folders to create.
+(Default=10)</p></li>
+<li><p><strong>period_top_degree_start</strong> (<em>(Optional)</em>) – If the setting  <em>CREATE_TOP_NODES_FILES_FLAG</em> was set to ‘Y’, then these numbers will define how many top degree node sub-folders for each period to create.
+(Default=1)</p></li>
+<li><p><strong>period_top_degree_end</strong> (<em>(Optional)</em>) – If the setting  <em>CREATE_TOP_NODES_FILES_FLAG</em> was set to ‘Y’, then these numbers will define how many top degree node sub-folders for each period to create.
+(Default=5)</p></li>
+<li><p><strong>commty_edge_size_cutoff</strong> (<em>(Optional)</em>) – If the setting textit{CREATE_COMMUNITY_FILES_FLAG} was set to ‘Y’, then this number will be used as the community size cutoff number. Any communities that have less nodes then this number will be ignored. If no number is given, the pipeline will use 200 as the default value.
+(Default=200)</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>…:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">setConfigs</span><span class="p">(</span><span class="n">type_of_graph</span><span class="o">=</span><span class="n">TYPE_OF_GRAPH</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">is_bot_Filter</span><span class="o">=</span><span class="n">IS_BOT_FILTER</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">period_arr</span><span class="o">=</span><span class="n">PERIOD_ARR</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_nodes_edges_files_flag</span><span class="o">=</span><span class="n">CREATE_NODES_EDGES_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_graphs_files_flag</span><span class="o">=</span><span class="n">CREATE_GRAPHS_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_topic_model_files_flag</span><span class="o">=</span><span class="n">CREATE_TOPIC_MODEL_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_ht_frequency_files_flag</span><span class="o">=</span><span class="n">CREATE_HT_FREQUENCY_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_words_frequency_files_flag</span><span class="o">=</span><span class="n">CREATE_WORDS_FREQUENCY_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_timeseries_files_flag</span><span class="o">=</span><span class="n">CREATE_TIMESERIES_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_top_nodes_files_flag</span><span class="o">=</span><span class="n">CREATE_TOP_NODES_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_community_files_flag</span><span class="o">=</span><span class="n">CREATE_COMMUNITY_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_ht_conn_files_flag</span><span class="o">=</span><span class="n">CREATE_HT_CONN_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">num_of_topics</span><span class="o">=</span><span class="n">NUM_OF_TOPICS</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_no_word_filter</span><span class="o">=</span><span class="n">TOP_NO_WORD_FILTER</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_ht_to_ignore</span><span class="o">=</span><span class="n">TOP_HT_TO_IGNORE</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">graph_plot_cutoff_no_nodes</span><span class="o">=</span><span class="n">GRAPH_PLOT_CUTOFF_NO_NODES</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">graph_plot_cutoff_no_edges</span><span class="o">=</span><span class="n">GRAPH_PLOT_CUTOFF_NO_EDGES</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_graph_without_node_scale_flag</span><span class="o">=</span><span class="n">CREATE_GRAPH_WITHOUT_NODE_SCALE_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_graph_with_node_scale_flag</span><span class="o">=</span><span class="n">CREATE_GRAPH_WITH_NODE_SCALE_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_reduced_graph_flag</span><span class="o">=</span><span class="n">CREATE_REDUCED_GRAPH_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">reduced_graph_comty_contract_per</span><span class="o">=</span><span class="n">REDUCED_GRAPH_COMTY_PER</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">reduced_graph_remove_edge_weight</span><span class="o">=</span><span class="n">REDUCED_GRAPH_REMOVE_EDGE_WEIGHT</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">reduced_graph_remove_edges</span><span class="o">=</span><span class="n">REDUCED_GRAPH_REMOVE_EDGES_UNTIL_CUTOFF_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_degree_start</span><span class="o">=</span><span class="n">TOP_DEGREE_START</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_degree_end</span><span class="o">=</span><span class="n">TOP_DEGREE_END</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">period_top_degree_start</span><span class="o">=</span><span class="n">PERIOD_TOP_DEGREE_START</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">period_top_degree_end</span><span class="o">=</span><span class="n">PERIOD_TOP_DEGREE_END</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">commty_edge_size_cutoff</span><span class="o">=</span><span class="n">COMMTY_EDGE_SIZE_CUTOFF</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lia Nogueira
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

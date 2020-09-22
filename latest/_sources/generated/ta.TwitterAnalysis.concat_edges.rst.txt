@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.concat\_edges
+================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.concat_edges

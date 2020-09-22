@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.print\_top\_nodes\_cluster\_metrics
+======================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.print_top_nodes_cluster_metrics

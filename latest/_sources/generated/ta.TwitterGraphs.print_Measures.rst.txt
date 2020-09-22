@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.print\_Measures
+================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.print_Measures

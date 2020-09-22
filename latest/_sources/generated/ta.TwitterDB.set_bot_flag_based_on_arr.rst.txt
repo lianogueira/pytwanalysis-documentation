@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.set\_bot\_flag\_based\_on\_arr
+===========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.set_bot_flag_based_on_arr

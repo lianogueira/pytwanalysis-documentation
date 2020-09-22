@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reference &mdash; pytwanalysis 0.0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://networkx.github.io/documentation/stable/reference.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Dictionary - (MongoDB Collections)" href="datadictionary.html" />
+    <link rel="prev" title="Tutorial" href="tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> pytwanalysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-ta.TwitterAnalysis">TwitterAnalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ta.TwitterDB">TwitterDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ta.TwitterGraphs">TwitterGraphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ta.TwitterTopics">TwitterTopics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datadictionary.html">Data Dictionary - (MongoDB Collections)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galery.html">Galery</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pytwanalysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-ta.TwitterAnalysis">
+<span id="twitteranalysis"></span><h2>TwitterAnalysis<a class="headerlink" href="#module-ta.TwitterAnalysis" title="Permalink to this headline">¶</a></h2>
+<p>Main class - It inherits TwitterGraphs, TwitterDB, and TwitterTopics classes.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.setConfigs.html#ta.TwitterAnalysis.setConfigs" title="ta.TwitterAnalysis.setConfigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfigs</span></code></a>([type_of_graph, is_bot_Filter, …])</p></td>
+<td><p>Configure the current object settings to drive the automation of the analysis files</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.concat_edges.html#ta.TwitterAnalysis.concat_edges" title="ta.TwitterAnalysis.concat_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">concat_edges</span></code></a>(G)</p></td>
+<td><p>Aux function to concatenate edges to help filter in mongoDB</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.build_db_collections.html#ta.TwitterAnalysis.build_db_collections" title="ta.TwitterAnalysis.build_db_collections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_db_collections</span></code></a>([inc, bots_ids_list_file])</p></td>
+<td><p>This method is in charge of extracting, cleaning, and loading the data into all the collections in MongoDB.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.plot_graph_contracted_nodes.html#ta.TwitterAnalysis.plot_graph_contracted_nodes" title="ta.TwitterAnalysis.plot_graph_contracted_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_graph_contracted_nodes</span></code></a>(G, file)</p></td>
+<td><p>Method to compress and plot graph based on the graph reduction settings that can be updated using the <em>setConfigs</em> method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.export_mult_types_edges_for_input.html#ta.TwitterAnalysis.export_mult_types_edges_for_input" title="ta.TwitterAnalysis.export_mult_types_edges_for_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_mult_types_edges_for_input</span></code></a>([…])</p></td>
+<td><p>This method will export edges from mongoDB data that can be used to create graphs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.nodes_edges_analysis_files.html#ta.TwitterAnalysis.nodes_edges_analysis_files" title="ta.TwitterAnalysis.nodes_edges_analysis_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nodes_edges_analysis_files</span></code></a>(G, path)</p></td>
+<td><p>Given a graph G, it exports nodes with they degree, edges with their weight, and word clouds representing the nodes scaled  by their degree</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.lda_analysis_files.html#ta.TwitterAnalysis.lda_analysis_files" title="ta.TwitterAnalysis.lda_analysis_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lda_analysis_files</span></code></a>(path[, startDate_filter, …])</p></td>
+<td><p>Creates topic model files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.ht_analysis_files.html#ta.TwitterAnalysis.ht_analysis_files" title="ta.TwitterAnalysis.ht_analysis_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ht_analysis_files</span></code></a>(path[, startDate_filter, …])</p></td>
+<td><p>Creates hashtag frequency files.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.words_analysis_files.html#ta.TwitterAnalysis.words_analysis_files" title="ta.TwitterAnalysis.words_analysis_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">words_analysis_files</span></code></a>(path[, …])</p></td>
+<td><p>Creates words frequency files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.time_series_files.html#ta.TwitterAnalysis.time_series_files" title="ta.TwitterAnalysis.time_series_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_series_files</span></code></a>(path[, startDate_filter, …])</p></td>
+<td><p>Creates timeseries frequency files.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.graph_analysis_files.html#ta.TwitterAnalysis.graph_analysis_files" title="ta.TwitterAnalysis.graph_analysis_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph_analysis_files</span></code></a>(G, path[, gr_prefix_nm])</p></td>
+<td><p>Plot graph analysis files for a given graph G.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.edge_files_analysis.html#ta.TwitterAnalysis.edge_files_analysis" title="ta.TwitterAnalysis.edge_files_analysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edge_files_analysis</span></code></a>(output_path)</p></td>
+<td><p>Automated way to generate all analysis files.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.get_time_series_df.html#ta.TwitterAnalysis.get_time_series_df" title="ta.TwitterAnalysis.get_time_series_df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time_series_df</span></code></a>([ht_arr, …])</p></td>
+<td><p>Method to query data in mongoDB for timeseries analysis given certain filters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.eda_analysis.html#ta.TwitterAnalysis.eda_analysis" title="ta.TwitterAnalysis.eda_analysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eda_analysis</span></code></a>()</p></td>
+<td><p>Method to print a summary of the initial exploratory data analysis for any dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.print_top_nodes_cluster_metrics.html#ta.TwitterAnalysis.print_top_nodes_cluster_metrics" title="ta.TwitterAnalysis.print_top_nodes_cluster_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_top_nodes_cluster_metrics</span></code></a>(G, …[, …])</p></td>
+<td><p>Calculates clustering metrics for top degree nodes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.print_commty_cluster_metrics.html#ta.TwitterAnalysis.print_commty_cluster_metrics" title="ta.TwitterAnalysis.print_commty_cluster_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_commty_cluster_metrics</span></code></a>(G[, comm_att, …])</p></td>
+<td><p>Calculates clustering metrics for top degree nodes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.ht_connection_files.html#ta.TwitterAnalysis.ht_connection_files" title="ta.TwitterAnalysis.ht_connection_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ht_connection_files</span></code></a>(path[, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.plot_top_ht_timeseries.html#ta.TwitterAnalysis.plot_top_ht_timeseries" title="ta.TwitterAnalysis.plot_top_ht_timeseries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_top_ht_timeseries</span></code></a>(top_no_start, …[, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterAnalysis.plot_timeseries.html#ta.TwitterAnalysis.plot_timeseries" title="ta.TwitterAnalysis.plot_timeseries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_timeseries</span></code></a>(df, arr_columns, file)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-ta.TwitterDB">
+<span id="twitterdb"></span><h2>TwitterDB<a class="headerlink" href="#module-ta.TwitterDB" title="Permalink to this headline">¶</a></h2>
+<p>TwitterDB class</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.setFocusedDataConfigs.html#ta.TwitterDB.setFocusedDataConfigs" title="ta.TwitterDB.setFocusedDataConfigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFocusedDataConfigs</span></code></a>(strFocusedTweetFields, …)</p></td>
+<td><p>Twitter documents have an extensive number of fields.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadDocFromFile.html#ta.TwitterDB.loadDocFromFile" title="ta.TwitterDB.loadDocFromFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadDocFromFile</span></code></a>(directory)</p></td>
+<td><p>This method will load tweet .json files into the DB (tweet collection) It goes through all .json files in the directory and load them one by one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.search7dayapi.html#ta.TwitterDB.search7dayapi" title="ta.TwitterDB.search7dayapi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search7dayapi</span></code></a>(consumer_key, consumer_secret, …)</p></td>
+<td><p>Send requests to the 7-Day search API and save data into MongoDB</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.searchPremiumAPI.html#ta.TwitterDB.searchPremiumAPI" title="ta.TwitterDB.searchPremiumAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">searchPremiumAPI</span></code></a>(twitter_bearer, api_name, …)</p></td>
+<td><p>Send requests to the Premium search API and save data into MongoDB</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.create_bat_file_apisearch.html#ta.TwitterDB.create_bat_file_apisearch" title="ta.TwitterDB.create_bat_file_apisearch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_bat_file_apisearch</span></code></a>(mongoDBServer, …)</p></td>
+<td><p>The method will create two files, one python script containing the code necessary to make the requests, and a <em>.bat</em> file that can be used to schedule the call of the python script.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadFocusedData.html#ta.TwitterDB.loadFocusedData" title="ta.TwitterDB.loadFocusedData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadFocusedData</span></code></a>(inc)</p></td>
+<td><p>Method to load focused data into mongoDB based on the configurations set on setFocusedDataConfigs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadUsersData.html#ta.TwitterDB.loadUsersData" title="ta.TwitterDB.loadUsersData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadUsersData</span></code></a>(inc, user_type_filter)</p></td>
+<td><p>Method to load user data into mongoDB.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadTweetHashTags.html#ta.TwitterDB.loadTweetHashTags" title="ta.TwitterDB.loadTweetHashTags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadTweetHashTags</span></code></a>(inc)</p></td>
+<td><p>Method to load hashthas in a separate collection in mongoDB.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadTweetConnections.html#ta.TwitterDB.loadTweetConnections" title="ta.TwitterDB.loadTweetConnections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadTweetConnections</span></code></a>(inc)</p></td>
+<td><p>Method to load tweet connection in a separate collection in mongoDB.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadTweetHTConnections.html#ta.TwitterDB.loadTweetHTConnections" title="ta.TwitterDB.loadTweetHTConnections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadTweetHTConnections</span></code></a>(inc)</p></td>
+<td><p>Method to load hashtag connection in a separate collection in mongoDB.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadWordsData.html#ta.TwitterDB.loadWordsData" title="ta.TwitterDB.loadWordsData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadWordsData</span></code></a>(inc)</p></td>
+<td><p>Method to load the tweet words in a separate collection in mongoDB.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.loadAggregations.html#ta.TwitterDB.loadAggregations" title="ta.TwitterDB.loadAggregations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadAggregations</span></code></a>(aggType)</p></td>
+<td><p>Method to load addtional aggregated collection to MongoDB It creates the tweetWords collection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.set_bot_flag_based_on_arr.html#ta.TwitterDB.set_bot_flag_based_on_arr" title="ta.TwitterDB.set_bot_flag_based_on_arr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_bot_flag_based_on_arr</span></code></a>(bots_list_id_str)</p></td>
+<td><p>Method to update MongoDb collection with a flag identifieng is a user is a bot or not.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.cleanTweetText.html#ta.TwitterDB.cleanTweetText" title="ta.TwitterDB.cleanTweetText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cleanTweetText</span></code></a>(text)</p></td>
+<td><p>Method used to clean the tweet message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterDB.exportData.html#ta.TwitterDB.exportData" title="ta.TwitterDB.exportData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportData</span></code></a>(exportType, filepath, inc[, …])</p></td>
+<td><p>Method to export the data from MongoDb into text files based on certain filters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterDB.queryData.html#ta.TwitterDB.queryData" title="ta.TwitterDB.queryData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">queryData</span></code></a>(exportType, filepath, inc[, …])</p></td>
+<td><p>Method to query the data from MongoDb.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-ta.TwitterGraphs">
+<span id="twittergraphs"></span><h2>TwitterGraphs<a class="headerlink" href="#module-ta.TwitterGraphs" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.loadGraphFromFile.html#ta.TwitterGraphs.loadGraphFromFile" title="ta.TwitterGraphs.loadGraphFromFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadGraphFromFile</span></code></a>(edge_file)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.plot_graph_att_distr.html#ta.TwitterGraphs.plot_graph_att_distr" title="ta.TwitterGraphs.plot_graph_att_distr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_graph_att_distr</span></code></a>(G, att[, title, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.plot_disconnected_graph_distr.html#ta.TwitterGraphs.plot_disconnected_graph_distr" title="ta.TwitterGraphs.plot_disconnected_graph_distr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_disconnected_graph_distr</span></code></a>(G[, file, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.contract_nodes_commty_per.html#ta.TwitterGraphs.contract_nodes_commty_per" title="ta.TwitterGraphs.contract_nodes_commty_per"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contract_nodes_commty_per</span></code></a>(G, perc[, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.plotSpringLayoutGraph.html#ta.TwitterGraphs.plotSpringLayoutGraph" title="ta.TwitterGraphs.plotSpringLayoutGraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotSpringLayoutGraph</span></code></a>(G, v_graph_name, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.largest_component_no_self_loops.html#ta.TwitterGraphs.largest_component_no_self_loops" title="ta.TwitterGraphs.largest_component_no_self_loops"><code class="xref py py-obj docutils literal notranslate"><span class="pre">largest_component_no_self_loops</span></code></a>(G)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.export_nodes_edges_to_file.html#ta.TwitterGraphs.export_nodes_edges_to_file" title="ta.TwitterGraphs.export_nodes_edges_to_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_nodes_edges_to_file</span></code></a>(G, node_f_name, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.create_node_subgraph.html#ta.TwitterGraphs.create_node_subgraph" title="ta.TwitterGraphs.create_node_subgraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_node_subgraph</span></code></a>(G, node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.get_top_degree_nodes.html#ta.TwitterGraphs.get_top_degree_nodes" title="ta.TwitterGraphs.get_top_degree_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_top_degree_nodes</span></code></a>(G, top_degree_start, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_spectral_clustering_labels.html#ta.TwitterGraphs.calculate_spectral_clustering_labels" title="ta.TwitterGraphs.calculate_spectral_clustering_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_spectral_clustering_labels</span></code></a>(G, k[, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_spectral_clustering.html#ta.TwitterGraphs.calculate_spectral_clustering" title="ta.TwitterGraphs.calculate_spectral_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_spectral_clustering</span></code></a>(G[, k, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_louvain_clustering.html#ta.TwitterGraphs.calculate_louvain_clustering" title="ta.TwitterGraphs.calculate_louvain_clustering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_louvain_clustering</span></code></a>(G)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_separability.html#ta.TwitterGraphs.calculate_separability" title="ta.TwitterGraphs.calculate_separability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_separability</span></code></a>(G_Community, G_All)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_density.html#ta.TwitterGraphs.calculate_density" title="ta.TwitterGraphs.calculate_density"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_density</span></code></a>(G_Community)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_average_clustering_coef.html#ta.TwitterGraphs.calculate_average_clustering_coef" title="ta.TwitterGraphs.calculate_average_clustering_coef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_average_clustering_coef</span></code></a>(G_Community)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_cliques.html#ta.TwitterGraphs.calculate_cliques" title="ta.TwitterGraphs.calculate_cliques"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_cliques</span></code></a>(G)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_power_nodes_score.html#ta.TwitterGraphs.calculate_power_nodes_score" title="ta.TwitterGraphs.calculate_power_nodes_score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_power_nodes_score</span></code></a>(G[, top_no])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.calculate_average_node_degree.html#ta.TwitterGraphs.calculate_average_node_degree" title="ta.TwitterGraphs.calculate_average_node_degree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_average_node_degree</span></code></a>(G)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.print_cluster_metrics.html#ta.TwitterGraphs.print_cluster_metrics" title="ta.TwitterGraphs.print_cluster_metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_cluster_metrics</span></code></a>(G_Community, G_All[, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.eigenDecomposition.html#ta.TwitterGraphs.eigenDecomposition" title="ta.TwitterGraphs.eigenDecomposition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigenDecomposition</span></code></a>(af_matrix[, bln_plot, topK])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.remove_edges.html#ta.TwitterGraphs.remove_edges" title="ta.TwitterGraphs.remove_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_edges</span></code></a>(G, min_degree_no)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.remove_edges_eithernode.html#ta.TwitterGraphs.remove_edges_eithernode" title="ta.TwitterGraphs.remove_edges_eithernode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_edges_eithernode</span></code></a>(G, min_degree_no)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterGraphs.print_Measures.html#ta.TwitterGraphs.print_Measures" title="ta.TwitterGraphs.print_Measures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_Measures</span></code></a>(G[, blnCalculateDimater, …])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-ta.TwitterTopics">
+<span id="twittertopics"></span><h2>TwitterTopics<a class="headerlink" href="#module-ta.TwitterTopics" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.get_coh_u_mass.html#ta.TwitterTopics.get_coh_u_mass" title="ta.TwitterTopics.get_coh_u_mass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_coh_u_mass</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.get_coh_c_v.html#ta.TwitterTopics.get_coh_c_v" title="ta.TwitterTopics.get_coh_c_v"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_coh_c_v</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.get_docs_from_file.html#ta.TwitterTopics.get_docs_from_file" title="ta.TwitterTopics.get_docs_from_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_docs_from_file</span></code></a>(file_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.clean_docs.html#ta.TwitterTopics.clean_docs" title="ta.TwitterTopics.clean_docs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_docs</span></code></a>(doc[, delete_numbers, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.train_model.html#ta.TwitterTopics.train_model" title="ta.TwitterTopics.train_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">train_model</span></code></a>(topic_docs, num_topics, model_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.train_model_from_file.html#ta.TwitterTopics.train_model_from_file" title="ta.TwitterTopics.train_model_from_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">train_model_from_file</span></code></a>(file_path, num_topics, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.plot_topics.html#ta.TwitterTopics.plot_topics" title="ta.TwitterTopics.plot_topics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_topics</span></code></a>(file_name, no_of_topics[, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.read_freq_list_file.html#ta.TwitterTopics.read_freq_list_file" title="ta.TwitterTopics.read_freq_list_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_freq_list_file</span></code></a>(file_path[, delimiter])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.plot_top_freq_list.html#ta.TwitterTopics.plot_top_freq_list" title="ta.TwitterTopics.plot_top_freq_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_top_freq_list</span></code></a>(fr_list, top_no, ylabel)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/ta.TwitterTopics.plot_word_cloud.html#ta.TwitterTopics.plot_word_cloud" title="ta.TwitterTopics.plot_word_cloud"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_word_cloud</span></code></a>(fr_list[, file, …])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="datadictionary.html" class="btn btn-neutral float-right" title="Data Dictionary - (MongoDB Collections)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorial.html" class="btn btn-neutral float-left" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lia Nogueira
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

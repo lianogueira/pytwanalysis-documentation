@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.queryData
+======================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.queryData

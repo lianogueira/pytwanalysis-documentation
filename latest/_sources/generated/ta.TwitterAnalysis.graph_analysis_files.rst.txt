@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.graph\_analysis\_files
+=========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.graph_analysis_files

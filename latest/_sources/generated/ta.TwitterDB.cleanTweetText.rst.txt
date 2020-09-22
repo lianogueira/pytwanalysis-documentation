@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.cleanTweetText
+===========================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.cleanTweetText

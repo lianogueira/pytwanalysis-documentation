@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.calculate\_average\_clustering\_coef
+=====================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.calculate_average_clustering_coef

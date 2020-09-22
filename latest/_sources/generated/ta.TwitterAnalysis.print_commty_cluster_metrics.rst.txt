@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.print\_commty\_cluster\_metrics
+==================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.print_commty_cluster_metrics

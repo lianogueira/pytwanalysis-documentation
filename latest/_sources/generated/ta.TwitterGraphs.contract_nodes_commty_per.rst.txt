@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.contract\_nodes\_commty\_per
+=============================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.contract_nodes_commty_per

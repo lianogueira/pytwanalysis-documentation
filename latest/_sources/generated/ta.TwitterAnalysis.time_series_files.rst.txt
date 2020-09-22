@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.time\_series\_files
+======================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.time_series_files

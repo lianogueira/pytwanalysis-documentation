@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.plot\_word\_cloud
+==================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.plot_word_cloud

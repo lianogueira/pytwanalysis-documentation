@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.get\_coh\_c\_v
+===============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.get_coh_c_v

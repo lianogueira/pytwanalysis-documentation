@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.eda\_analysis
+================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.eda_analysis

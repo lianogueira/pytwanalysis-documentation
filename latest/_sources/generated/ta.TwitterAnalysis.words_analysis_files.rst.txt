@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.words\_analysis\_files
+=========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.words_analysis_files

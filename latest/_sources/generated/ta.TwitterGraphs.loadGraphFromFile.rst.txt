@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.loadGraphFromFile
+==================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.loadGraphFromFile

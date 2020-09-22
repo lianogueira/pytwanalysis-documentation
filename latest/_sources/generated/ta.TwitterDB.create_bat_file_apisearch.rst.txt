@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.create\_bat\_file\_apisearch
+=========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.create_bat_file_apisearch

@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.export\_nodes\_edges\_to\_file
+===============================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.export_nodes_edges_to_file

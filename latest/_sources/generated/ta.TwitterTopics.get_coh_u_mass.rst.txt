@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.get\_coh\_u\_mass
+==================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.get_coh_u_mass

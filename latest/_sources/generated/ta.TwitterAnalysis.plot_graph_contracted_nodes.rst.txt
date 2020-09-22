@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.plot\_graph\_contracted\_nodes
+=================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.plot_graph_contracted_nodes

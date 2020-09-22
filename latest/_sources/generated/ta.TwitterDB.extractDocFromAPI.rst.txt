@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.extractDocFromAPI
+==============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.extractDocFromAPI

@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.ht\_connection\_files
+========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.ht_connection_files

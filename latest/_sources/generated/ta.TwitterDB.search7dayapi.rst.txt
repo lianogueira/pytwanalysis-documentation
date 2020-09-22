@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.search7dayapi
+==========================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.search7dayapi

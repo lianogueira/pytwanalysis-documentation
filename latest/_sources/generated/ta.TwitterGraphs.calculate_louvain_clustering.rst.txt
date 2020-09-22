@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.calculate\_louvain\_clustering
+===============================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.calculate_louvain_clustering

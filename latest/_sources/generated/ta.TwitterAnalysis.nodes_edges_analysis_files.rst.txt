@@ -1,0 +1,6 @@
+﻿ta.TwitterAnalysis.nodes\_edges\_analysis\_files
+================================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterAnalysis.nodes_edges_analysis_files

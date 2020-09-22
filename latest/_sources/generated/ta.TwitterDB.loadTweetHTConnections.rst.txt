@@ -1,0 +1,6 @@
+﻿ta.TwitterDB.loadTweetHTConnections
+===================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterDB.loadTweetHTConnections

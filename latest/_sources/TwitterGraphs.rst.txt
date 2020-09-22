@@ -1,0 +1,25 @@
+Auto generated code
+==============================
+
+*********
+Functions
+*********
+
+
+TwitterDB
+-----
+
+.. automodule:: ta.TwitterDB
+.. autosummary::
+   
+   :toctree: generated/
+   :recursive:
+   
+   loadDocFromFile
+   extractDocFromAPI
+   create_path
+   
+   
+   
+
+   

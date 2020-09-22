@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.plot\_top\_freq\_list
+======================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.plot_top_freq_list

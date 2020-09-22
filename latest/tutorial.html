@@ -1,0 +1,662 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial &mdash; pytwanalysis 0.0.3 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://networkx.github.io/documentation/stable/tutorial.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reference" href="reference.html" />
+    <link rel="prev" title="Install" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> pytwanalysis
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#initialize-package">Initialize package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-data">Import Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-collections">Create Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-edges">Create Edges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eda">EDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-all-analysis-files">Create All Analysis Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-analysis-examples">Manual Analysis Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datadictionary.html">Data Dictionary - (MongoDB Collections)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galery.html">Galery</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pytwanalysis</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Tutorial</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This guide can help you start working with pytwanalysis.</p>
+<div class="section" id="initialize-package">
+<h2>Initialize package<a class="headerlink" href="#initialize-package" title="Permalink to this headline">¶</a></h2>
+<p>Initialize package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pytwanalysis</span> <span class="k">as</span> <span class="nn">ta</span>
+</pre></div>
+</div>
+<p>Set your mongoDB connection:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mongoDBConnectionSTR</span> <span class="o">=</span> <span class="s2">&quot;mongodb://localhost:27017&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">mongoDBConnectionSTR</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">twitter_DB_API_test1</span> <span class="c1">#choose your DB name here</span>
+</pre></div>
+</div>
+<p>Initialize your TwitterAnalysis object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Set up the folder path you want to save all of the output files</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">Data</span><span class="se">\\</span><span class="s1">MyFiles&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># create object of type TwitterAnalysis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span> <span class="o">=</span> <span class="n">ta</span><span class="o">.</span><span class="n">TwitterAnalysis</span><span class="p">(</span><span class="n">BASE_PATH</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-data">
+<h2>Import Data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h2>
+<p>Import data from json files into the mongoDB database:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># This is the folder path where all of your twitter json files should be</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">JSON_FILES_PATH</span> <span class="o">=</span> <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">Data</span><span class="se">\\</span><span class="s1">tests</span><span class="se">\\</span><span class="s1">my_json_files&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Load json files into mongoDB</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">loadDocFromFile</span><span class="p">(</span><span class="n">JSON_FILES_PATH</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Request data from Twitter’s 7-day Search API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># you authentication keys here - (you can retrive these from your Twitter&#39;s developer account)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">consumer_key</span> <span class="o">=</span> <span class="s1">&#39;[your consumer_key]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">consumer_secret</span> <span class="o">=</span> <span class="s1">&#39;[yourconsumer_secret]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">access_token</span> <span class="o">=</span> <span class="s1">&#39;[your access_token]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">access_token_secret</span> <span class="o">=</span> <span class="s1">&#39;[your access_token_secret]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span><span class="o">=</span><span class="s1">&#39;term1 OR term2 OR term3&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># send the request to Twitter and save data into MongoDB</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">myAnalysis</span><span class="o">.</span><span class="n">search7dayapi</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">consumer_key</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">consumer_secret</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">access_token</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">access_token_secret</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">query</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">result_type</span><span class="o">=</span> <span class="s1">&#39;mixed&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">max_count</span><span class="o">=</span><span class="s1">&#39;100&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">lang</span><span class="o">=</span><span class="s1">&#39;en&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Request data from Twitter’s Premium Search API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># options are &quot;30day&quot; or fullarchive</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">api_name</span> <span class="o">=</span> <span class="s2">&quot;fullarchive&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># the name of your dev environment  - (The one associate with your Twitter developer account)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dev_environment</span> <span class="o">=</span> <span class="s2">&quot;FullArchDev.json&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># your query</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;(term1 OR term2 OR term3) lang:en&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># start and end date</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">date_start</span> <span class="o">=</span> <span class="s2">&quot;202002150000&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">date_end</span> <span class="o">=</span> <span class="s2">&quot;202002160000&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># twitter bearear authentication - (this can be generated from your authentication keys)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">twitter_bearer</span> <span class="o">=</span> <span class="s1">&#39;[your bearer authentication]&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># send the request to Twitter and save data into MongoDB</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="p">,</span> <span class="n">next_token</span> <span class="o">=</span> <span class="n">myAnalysis</span><span class="o">.</span><span class="n">searchPremiumAPI</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">twitter_bearer</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">api_name</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">dev_environment</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">query</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">date_start</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">date_end</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">next_token</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">max_count</span><span class="o">=</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">(</span><span class="n">next_token</span><span class="p">)</span>
+<span class="go">eyJtYXhJZCI6MTIyODgzMTM1MTU1MTUxMjU3N30=</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-collections">
+<h2>Create Collections<a class="headerlink" href="#create-collections" title="Permalink to this headline">¶</a></h2>
+<p>Create database collections that will be used to analyze the data. (Depending on the size of your data, this could take a while).
+After this step, you should see all collections in your MongoDB database. You cannot  go forward with your analysis without having this step complete:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># You can set the number of tweets to load at a time.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># (Large number may cause out of memory errors; low number may take a long time to run)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">step</span> <span class="o">=</span> <span class="mi">50000</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Build collections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">build_db_collections</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-edges">
+<h2>Create Edges<a class="headerlink" href="#create-edges" title="Permalink to this headline">¶</a></h2>
+<p>Export edges from MongoDB. This step will create edge files that will be used for graph analysis:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Set up the periods you want to analyze</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Set period_arr to None if you don&#39;t want to analyze separate periods</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Format: Period Name, Period Start Date, Period End Date</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">period_arr</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;P1&#39;</span><span class="p">,</span> <span class="s1">&#39;10/08/2017 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;10/15/2017 00:00:00&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="p">[</span><span class="s1">&#39;P2&#39;</span><span class="p">,</span> <span class="s1">&#39;01/21/2018 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;02/04/2018 00:00:00&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="p">[</span><span class="s1">&#39;P3&#39;</span><span class="p">,</span> <span class="s1">&#39;02/04/2018 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;02/18/2018 00:00:00&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="p">[</span><span class="s1">&#39;P4&#39;</span><span class="p">,</span> <span class="s1">&#39;02/18/2018 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;03/04/2018 00:00:00&#39;</span><span class="p">]]</span>
+
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">## TYPE OF GRAPH EDGES</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">########################################################</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># You can export edges for one type, or for all</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Options: user_conn_all,       --All user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_mention,   --Only Mentions user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_retweet,   --Only Retweets user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_reply,     --Only Replies user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_quote,     --Only Quotes user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          ht_conn              --Hashtag connects - (Hashtgs that were used together)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          all                  --It will export all of the above options</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TYPE_OF_GRAPH</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">export_mult_types_edges_for_input</span><span class="p">(</span><span class="n">period_arr</span><span class="o">=</span><span class="n">period_arr</span><span class="p">,</span> <span class="n">type_of_graph</span><span class="o">=</span><span class="n">TYPE_OF_GRAPH</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="eda">
+<h2>EDA<a class="headerlink" href="#eda" title="Permalink to this headline">¶</a></h2>
+<p>Create Exploratory Data Analysis Files. This will show you the summary information about your data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">eda_analysis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-all-analysis-files">
+<h2>Create All Analysis Files<a class="headerlink" href="#create-all-analysis-files" title="Permalink to this headline">¶</a></h2>
+<p>It creates all folders and analysis files based on your given settings.</p>
+<p>IMPORTANT STEP: Choose your settings here before running the automation analysis.</p>
+<p>These variables will help you decide what files you want to see and with which parameters</p>
+<p>Running the analysis step could take a long time.
+If you want to run piece by piece so you can see results soon, you can change the flags to ‘Y’ one at the time</p>
+<p>Choose the type of graph to analyze:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## TYPE OF GRAPH ANALYSIS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">########################################################</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Type of graph analysis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Options: user_conn_all,       --All user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_mention,   --Only Mentions user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_retweet,   --Only Retweets user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_reply,     --Only Replies user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          user_conn_quote,     --Only Quotes user connections</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#          ht_conn              --Hashtag connects - (Hashtgs that were used together)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TYPE_OF_GRAPH</span> <span class="o">=</span> <span class="s1">&#39;user_conn_all&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+</pre></div>
+</div>
+<p>Decide the output path, periods to analyze, and bot settings</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># Path where you want to save your output files</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># It will use the path you already set previously,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># but you can change here in case you want a new path</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">OUTPUT_PATH</span> <span class="o">=</span> <span class="n">BASE_PATH</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span>    <span class="c1">#Filter bots or not. Options: (None, &#39;0&#39;, or &#39;1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">IS_BOT_FILTER</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># Same period array you already set previously.</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># You can change here in case you want something new,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># just follow the same format as array in previous step</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">PERIOD_ARR</span> <span class="o">=</span>  <span class="p">[[</span><span class="s1">&#39;P1&#39;</span><span class="p">,</span> <span class="s1">&#39;10/08/2017 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;10/15/2017 00:00:00&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>                              <span class="p">[</span><span class="s1">&#39;P2&#39;</span><span class="p">,</span> <span class="s1">&#39;01/21/2018 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;02/04/2018 00:00:00&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>                              <span class="p">[</span><span class="s1">&#39;P3&#39;</span><span class="p">,</span> <span class="s1">&#39;02/04/2018 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;02/18/2018 00:00:00&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>                              <span class="p">[</span><span class="s1">&#39;P4&#39;</span><span class="p">,</span> <span class="s1">&#39;02/18/2018 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;03/04/2018 00:00:00&#39;</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1">#------------------------------------------------------------</span>
+</pre></div>
+</div>
+<p>Decide what types of files to create and with what options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates a separate folder for the top degree nodes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_TOP_NODES_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># IF you chose CREATE_TOP_NODES_FILES_FLAG=&#39;Y&#39;, you can also set these settings</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># We will create subfolder for the top degree nodes based on these number</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TOP_DEGREE_START</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TOP_DEGREE_END</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># We will create subfolders for the top degree nodes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># for each period based on these numbers</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">PERIOD_TOP_DEGREE_START</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">PERIOD_TOP_DEGREE_END</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates files with the edges of each folder</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># and a list of nodes and their degree</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_NODES_EDGES_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates the graph visualization files</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_GRAPHS_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates files for topic discovery</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Tweet texts for that folder, word cloud, and LDA Model Visualization</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_TOPIC_MODEL_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># If you chose CREATE_TOPIC_MODEL_FILES_FLAG=&#39;Y&#39;, you can also set this setting</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># This is the number of topics to send as input to LDA model (Default is 4)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NUM_OF_TOPICS</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates files with ht frequency</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Text files with all hashtags used, wordcloud, and barchart</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_HT_FREQUENCY_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates files with word frequency</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Text files with all hashtags used, wordcloud, and barchart</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_WORDS_FREQUENCY_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># If you answer yes to CREATE_WORDS_FREQUENCY_FILES_FLAG, then you can choose</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># how many words you want to see in your list file.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># The number of words to save on the frequency word list file. (Default=5000)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TOP_NO_WORD_FILTER</span> <span class="o">=</span> <span class="mi">5000</span>
+
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates files with time series data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_TIMESERIES_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates graphs with hashtag information</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># This can be used when you&#39;re analyzing user connections,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># but still want to see the hashtag connection graph for that group of users</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_HT_CONN_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># IF you chose CREATE_HT_CONN_FILES_FLAG = &#39;Y&#39;, you can also set this setting</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># This is to ignore the top hashtags in the visualization</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Sometimes ignoring the main hashtag can be helpful in visualization to</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># discovery other important structures within the graph</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TOP_HT_TO_IGNORE</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Creates louvain communities folder and files</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_COMMUNITY_FILES_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># If set CREATE_COMMUNITY_FILES_FLAG = &#39;Y&#39;, then you can</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># set a cutoff number of edges to identify when a folder should be created</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># If the commty has less edges than this number, it won&#39;t create a new folder</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Default is 200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">COMMTY_EDGE_SIZE_CUTOFF</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">## GRAPH OPTIONS #######################################</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">########################################################</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># In case you want to print full graph, with no reduction, and without node scale</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_GRAPH_WITHOUT_NODE_SCALE_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># In case you want to print full graph, with no reduction, but with node scale</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_GRAPH_WITH_NODE_SCALE_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># In case you want to print reduced graph</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CREATE_REDUCED_GRAPH_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># This is the cutoff number of edges to decide if we will print</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># the graph or not. The logic will remove nodes until it can get</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># to this max number of edges to plot</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># If you choose a large number it may take a long time to run.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># If you choose a small number it may contract nodes too much or not print the graph at all</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">GRAPH_PLOT_CUTOFF_NO_NODES</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">GRAPH_PLOT_CUTOFF_NO_EDGES</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Reduced Graph settings</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># This is a percentage number used to remove nodes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># so we can be able to plot large graphs.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># You can run this logic multiple times with different percentages.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Each time the logic will save the graph file with a different name</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># according to the parameter given</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">REDUCED_GRAPH_COMTY_PER</span> <span class="o">=</span> <span class="mi">90</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Reduce graph by removing edges with weight less than this number</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># None if you don&#39;t want to use this reduction method</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">REDUCED_GRAPH_REMOVE_EDGE_WEIGHT</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Continuously reduce graph until it gets to the GRAPH_PLOT_CUTOFF numbers or to 0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">REDUCED_GRAPH_REMOVE_EDGES_UNTIL_CUTOFF_FLAG</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#------------------------------------------------------------</span>
+</pre></div>
+</div>
+<p>Set configuration with your choices:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Set configurations</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">setConfigs</span><span class="p">(</span><span class="n">type_of_graph</span><span class="o">=</span><span class="n">TYPE_OF_GRAPH</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">is_bot_Filter</span><span class="o">=</span><span class="n">IS_BOT_FILTER</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">period_arr</span><span class="o">=</span><span class="n">PERIOD_ARR</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_nodes_edges_files_flag</span><span class="o">=</span><span class="n">CREATE_NODES_EDGES_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_graphs_files_flag</span><span class="o">=</span><span class="n">CREATE_GRAPHS_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_topic_model_files_flag</span><span class="o">=</span><span class="n">CREATE_TOPIC_MODEL_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_ht_frequency_files_flag</span><span class="o">=</span><span class="n">CREATE_HT_FREQUENCY_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_words_frequency_files_flag</span><span class="o">=</span><span class="n">CREATE_WORDS_FREQUENCY_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_timeseries_files_flag</span><span class="o">=</span><span class="n">CREATE_TIMESERIES_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_top_nodes_files_flag</span><span class="o">=</span><span class="n">CREATE_TOP_NODES_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_community_files_flag</span><span class="o">=</span><span class="n">CREATE_COMMUNITY_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_ht_conn_files_flag</span><span class="o">=</span><span class="n">CREATE_HT_CONN_FILES_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">num_of_topics</span><span class="o">=</span><span class="n">NUM_OF_TOPICS</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_no_word_filter</span><span class="o">=</span><span class="n">TOP_NO_WORD_FILTER</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_ht_to_ignore</span><span class="o">=</span><span class="n">TOP_HT_TO_IGNORE</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">graph_plot_cutoff_no_nodes</span><span class="o">=</span><span class="n">GRAPH_PLOT_CUTOFF_NO_NODES</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">graph_plot_cutoff_no_edges</span><span class="o">=</span><span class="n">GRAPH_PLOT_CUTOFF_NO_EDGES</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_graph_without_node_scale_flag</span><span class="o">=</span><span class="n">CREATE_GRAPH_WITHOUT_NODE_SCALE_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_graph_with_node_scale_flag</span><span class="o">=</span><span class="n">CREATE_GRAPH_WITH_NODE_SCALE_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">create_reduced_graph_flag</span><span class="o">=</span><span class="n">CREATE_REDUCED_GRAPH_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">reduced_graph_comty_contract_per</span><span class="o">=</span><span class="n">REDUCED_GRAPH_COMTY_PER</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">reduced_graph_remove_edge_weight</span><span class="o">=</span><span class="n">REDUCED_GRAPH_REMOVE_EDGE_WEIGHT</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">reduced_graph_remove_edges</span><span class="o">=</span><span class="n">REDUCED_GRAPH_REMOVE_EDGES_UNTIL_CUTOFF_FLAG</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_degree_start</span><span class="o">=</span><span class="n">TOP_DEGREE_START</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">top_degree_end</span><span class="o">=</span><span class="n">TOP_DEGREE_END</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">period_top_degree_start</span><span class="o">=</span><span class="n">PERIOD_TOP_DEGREE_START</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">period_top_degree_end</span><span class="o">=</span><span class="n">PERIOD_TOP_DEGREE_END</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">commty_edge_size_cutoff</span><span class="o">=</span><span class="n">COMMTY_EDGE_SIZE_CUTOFF</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="p">)</span>
+</pre></div>
+</div>
+<p>Create all folders and files based on your choices:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">edge_files_analysis</span><span class="p">(</span><span class="n">output_path</span><span class="o">=</span><span class="n">OUTPUT_PATH</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The following is a list of the possible analysis files that will get created in each folder:</p>
+<ul class="simple">
+<li><p><strong>G_Measures-(All).txt:</strong> Some metrics of the graph. (e.g. total number of nodes and edges).</p></li>
+<li><p><strong>G_Measures-(LargestCC).txt:</strong> Some metrics of the  largest connected component of the graph. (e.g. total number of nodes and edges).</p></li>
+<li><p><strong>G_Edges.txt:</strong> List of edges and their respective weight.</p></li>
+<li><p><strong>G_NodesWithDegree.txt:</strong> List of all nodes with their respective degrees.</p></li>
+<li><p><strong>G_Nodes_WordCloud.png:</strong> Word cloud representing the nodes in the graph, weighted by the node’s degree</p></li>
+<li><p><strong>G_Graph.png:</strong> Plot of the full graph without any reduction. The size of the nodes are scaled based on the node’s degree.</p></li>
+<li><p><strong>G_Graph(WithoutScale).png:</strong> Plot of the full graph without any reduction and without any scale for the node size.</p></li>
+<li><p><strong>G_Graph-(ReducedGraph)[%Parameters].png:</strong> Plot of the graph after reduction. The parameters used for reduction will appear in the file name inside brackets.</p></li>
+<li><p><strong>T_tweetTextsForTopics.txt:</strong> Tweet texts excluding some special characters, stop words, hashtags, and mentions</p></li>
+<li><p><strong>Topics-(LDA model).png:</strong> Topic discovery plot using LDA model</p></li>
+<li><p><strong>T_HT_FrequencyList.txt:</strong> A list of all hashtags and the number of times they were used</p></li>
+<li><p><strong>T_HT_Top30_BarChart.png:</strong> A Bar Chart showing the top 30 hashtags</p></li>
+<li><p><strong>T_HT_Top30_BarChart-(Excluding Top1).png:</strong> A Bar Chart showing the top hashtags, excluding the top 1</p></li>
+<li><p><strong>T_HT_Top30_BarChart-(Excluding Top2).png:</strong> A Bar Chart showing the top hashtags, excluding the top 2</p></li>
+<li><p><strong>T_HT_WordCloud.png:</strong> Word cloud representing the hashtags used, weighted by their frequency</p></li>
+<li><p><strong>T_Words_FrequencyList.txt:</strong> A list of the top words used and the number of times they were used.</p></li>
+<li><p><strong>T_Words_Top30_BarChart.png:</strong> A Bar Chart showing the top 30 words</p></li>
+<li><p><strong>T_Words_WordCloud.png:</strong> Word cloud representing the words used, weighted by their frequency.</p></li>
+<li><p><strong>TS_TweetCount.png</strong>: Timeseries graph showing the tweet count by day.</p></li>
+<li><p><strong>TS_TweetCountByHT[1-5]:</strong> Timeseries graph showing the hash count by day of the the top 5 hashtags.</p></li>
+<li><p><strong>ht_edges.txt:</strong> List of hashtag edges created based on the connections made by two hashtags being used on the same tweet. This files is used to create the hashtag connections graph.</p></li>
+<li><p><strong>HTG_G_Graph.png:</strong> Hashtag connection graph.</p></li>
+<li><p><strong>HTG_G_Graph-(ReducedGraph)[%Parameters].png</strong>: Reduced hashtag connection graph. The parameters used for reduction will appear in the file name inside brackets.</p></li>
+</ul>
+<p>Even though the files can be generated automatically, you can also run separate steps manually.</p>
+</div>
+<div class="section" id="manual-analysis-examples">
+<h2>Manual Analysis Examples<a class="headerlink" href="#manual-analysis-examples" title="Permalink to this headline">¶</a></h2>
+<p>Some example of how to use the individual methods of this library in case you don’t want to use the automation to create all files.</p>
+<dl>
+<dt>Create LDA Analysis files::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">lda_analysis_files</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">Data</span><span class="se">\\</span><span class="s1">MyFiles&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">startDate_filter</span><span class="o">=</span><span class="s1">&#39;09/20/2020 00:00:00&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">endDate_filter</span><span class="o">=</span><span class="s1">&#39;03/04/2021 00:00:00&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Create hashtag frequency Analysis files::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">ht_analysis_files</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">Data</span><span class="se">\\</span><span class="s1">MyFiles&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">startDate_filter</span><span class="o">=</span><span class="s1">&#39;09/20/2020 00:00:00&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">endDate_filter</span><span class="o">=</span><span class="s1">&#39;03/04/2021 00:00:00&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Create word frequency Analysis files::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">words_analysis_files</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;D:</span><span class="se">\\</span><span class="s1">Data</span><span class="se">\\</span><span class="s1">MyFiles&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">startDate_filter</span><span class="o">=</span><span class="s1">&#39;09/20/2020 00:00:00&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">endDate_filter</span><span class="o">=</span><span class="s1">&#39;03/04/2021 00:00:00&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Create timeseries frequency Analysis files::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+<dt>Create nodes and edges Analysis files::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+<dt>Create networkx graph from edge file::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">edge_file_path</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">MyPath</span><span class="se">\\</span><span class="s1">edges.txt&#39;</span>
+<span class="go">G = myAnalysis.loadGraphFromFile(edge_file_path)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Plot graph given networkx graph G::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+<dt>Plot graph given networkx graph G::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+<dt>Calculate louvain_clustering::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G2</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">myAnalysis</span><span class="o">.</span><span class="n">calculate_louvain_clustering</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Calculate spectral_clustering::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">G2</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">myAnalysis</span><span class="o">.</span><span class="n">calculate_spectral_clustering</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Print clustering metrics for community_louvain clustering method::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">print_commty_cluster_metrics</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">G</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">comm_att</span> <span class="o">=</span> <span class="s1">&#39;community_louvain&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">ignore_cmmty_lt</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">acc_node_size_cutoff</span><span class="o">=</span><span class="mi">30000</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Print clustering metrics for the top 25 nodes clusters::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myAnalysis</span><span class="o">.</span><span class="n">print_top_nodes_cluster_metrics</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">G</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="mi">25</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">acc_node_size_cutoff</span><span class="o">=</span><span class="mi">30000</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Compress graphs::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+<dt>Get Largest Connected Component::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+<dt>Plot Community Distribution::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>There are many other options of manual analysis you can do. Explore the methods available on the Reference section of this documentation for more.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reference.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install.html" class="btn btn-neutral float-left" title="Install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Lia Nogueira
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

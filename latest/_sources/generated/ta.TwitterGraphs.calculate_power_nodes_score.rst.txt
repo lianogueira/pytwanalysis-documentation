@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.calculate\_power\_nodes\_score
+===============================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.calculate_power_nodes_score

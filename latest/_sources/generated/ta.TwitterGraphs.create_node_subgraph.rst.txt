@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.create\_node\_subgraph
+=======================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.create_node_subgraph

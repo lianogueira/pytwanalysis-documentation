@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.remove\_edges\_eithernode
+==========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.remove_edges_eithernode

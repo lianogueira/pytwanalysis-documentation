@@ -1,0 +1,6 @@
+﻿ta.TwitterGraphs.calculate\_separability
+========================================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterGraphs.calculate_separability

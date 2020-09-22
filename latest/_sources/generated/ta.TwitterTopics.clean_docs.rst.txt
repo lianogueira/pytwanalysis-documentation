@@ -1,0 +1,6 @@
+﻿ta.TwitterTopics.clean\_docs
+============================
+
+.. currentmodule:: ta
+
+.. automethod:: TwitterTopics.clean_docs
