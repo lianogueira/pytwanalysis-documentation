@@ -29,10 +29,10 @@ Or upgrade with the ``--user`` flag::
 Requirements
 ----------------------------
 
-1. Python 3.7
-
-2. **Database**: MongoDB - (Version: 4.0+)
-
+1. **Python 3.7** \
+  
+2. **Database**: MongoDB - (Version: 4.0+) 
+  
 3. **Libraries:**
  + pymongo 
  + NLTK  

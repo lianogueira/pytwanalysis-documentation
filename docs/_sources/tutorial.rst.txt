@@ -264,7 +264,7 @@ Decide what types of files to create and with what options::
 
 	>>> # Creates louvain communities folder and files
 	>>> #------------------------------------------------------------
-	>>> CREATE_COMMUNITY_FILES_FLAG = 'Y'
+	>>> CREATE_COMMUNITY_FILES_FLAG = 'N'
 	>>> # If set CREATE_COMMUNITY_FILES_FLAG = 'Y', then you can
 	>>> # set a cutoff number of edges to identify when a folder should be created
 	>>> # If the commty has less edges than this number, it won't create a new folder
